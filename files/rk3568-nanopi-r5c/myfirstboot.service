@@ -1,0 +1,9 @@
+[Unit]
+Description=firstboot once settings
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/myfirstboot.sh
+
+[Install]
+WantedBy=multi-user.target
