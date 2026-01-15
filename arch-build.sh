@@ -121,7 +121,7 @@ function format_part(){
 	sudo mkfs.fat -F 32 -n ESP "${loopdev}p1"
 
 	cecho yellow "formatted ${loopdev}p2 as ext4.\n"
-	sudo mkfs.ext4 -F -L ROOTFS "${loopdev}p2"
+	sudo mkfs.ext4 -b 4096 -F -L ROOTFS "${loopdev}p2"
 }
 
 function mount_rootfs(){
